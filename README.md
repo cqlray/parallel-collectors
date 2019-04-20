@@ -9,6 +9,8 @@
 
 Parallel Collectors is a toolkit easing parallel collection processing in Java using Stream API. 
 
+[[https://github.com/pivovarit/parallel-collectors/blob/readme-update/docs/img/completion-order.gif|alt=completion-order]]
+
     list.stream()
       .collect(parallelToList(i -> foo(i), executor, 2)).orTimeout(1000, MILLISECONDS)
       .thenAccept(System.out::println)
